@@ -23,29 +23,21 @@ services:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - "8080:80"
+      - "8081:80"
     depends_on:
       - db
-  
+
   backend:
     build:
       context: ./node
       dockerfile: Dockerfile
     container_name: backend
+    environment:
+      - PORT=8080
     ports:
-      - "3000:3000"
+      - "8080:8080"
     depends_on:
       - db
-
-  frontend:
-    build:
-      context: ./react
-      dockerfile: Dockerfile
-    container_name: frontend
-    ports:
-      - "80:80"
-    depends_on:
-      - backend
 
 volumes:
   db-data:
