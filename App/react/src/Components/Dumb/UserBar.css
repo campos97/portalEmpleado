@@ -1,0 +1,41 @@
+.user-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #002b53;
+  color: white;
+  font-size: 1.2rem;
+  height: 6rem;
+  width: 100%;
+}
+
+.user-bar nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.user-bar nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-pic {
+  border: 1px solid #03bfcb;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+}
+
+.logo {
+  padding: 1rem;
+  height: 6rem;
+  width: 6rem;
+}
